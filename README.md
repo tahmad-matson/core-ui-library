@@ -52,6 +52,15 @@ The `Button` component accepts the following props:
 - `size`: Defines the size of the button. Possible values are `small`, `medium`, and `large`. Default is `medium`.
 - Any other props are passed directly to the underlying `<button>` element.
 
+### BEM Methodology
+
+This component library uses the BEM (Block Element Modifier) methodology for styling. The `Button` component applies BEM class names as follows:
+
+- `button--primary`: Primary button style.
+- `button--secondary`: Secondary button style.
+- `button--large`: Large button size.
+- `button--small`: Small button size.
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps to contribute:
@@ -67,9 +76,5 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 
 ## Maintainers
 
-This project is maintained by the Matson Inc team. If you have any questions or issues, please contact us at support@matson-inc.com.
+This project is maintained by the Matson Inc team. If you have any questions or issues, please contact us at tahmad@matson.com.
 ```
-
-### Summary
-
-This README provides instructions on how to install the package, use the `Button` component, and includes basic information about contributing and licensing. Feel free to customize it further based on the additional components you may have in your library and any other specific details you want to include.
