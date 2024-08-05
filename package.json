@@ -1,6 +1,6 @@
 {
   "name": "@matson-inc/core-ui-library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "@matson-inc/core-ui-library is a reusable component library built with React, TypeScript, and styled-components. This library follows the atomic design methodology, providing a set of modular, composable, and reusable UI components.",
   "author": "tahmad-matson",
