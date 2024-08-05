@@ -20,7 +20,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@theme/*": ["src/theme/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./@types"]
   },
   "include": ["src"]
 }

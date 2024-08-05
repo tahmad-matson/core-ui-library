@@ -1,5 +1,6 @@
 import { defineConfig } from 'tsup';
-import tsconfigPaths from 'esbuild-plugin-tsconfig-paths';
+import alias from 'esbuild-plugin-alias';
+import path from 'path';
 
 export default defineConfig({
   entry: ['src/index.ts'],
@@ -8,5 +9,10 @@ export default defineConfig({
   outDir: 'dist',
   clean: true,
   external: ['react', 'react-dom', 'styled-components', 'react-router-dom'],
-  esbuildPlugins: [tsconfigPaths()],
+  esbuildPlugins: [
+    alias({
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@theme': path.resolve(__dirname, 'src/theme'),
+    }),
+  ],
 });

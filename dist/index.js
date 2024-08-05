@@ -59,14 +59,25 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  Button: () => Button_default
+  Button: () => Button_default,
+  Heading: () => Heading_default,
+  Link: () => Link_default,
+  Paragraph: () => Paragraph_default
 });
 module.exports = __toCommonJS(src_exports);
 
 // src/components/atoms/Button/Button.styled.ts
 var import_styled_components = __toESM(require("styled-components"));
+
+// src/theme/colors.ts
+var colors = {
+  primary: "#007bff",
+  secondary: "#6c757d"
+};
+
+// src/components/atoms/Button/Button.styled.ts
 var ButtonBase = import_styled_components.default.button`
-  background-color: #007bff;
+  background-color: ${colors.primary};
   border: none;
   border-radius: 4px;
   color: white;
@@ -75,11 +86,11 @@ var ButtonBase = import_styled_components.default.button`
   cursor: pointer;
 
   &.button--primary {
-    background-color: #007bff;
+    background-color: ${colors.primary};
   }
 
   &.button--secondary {
-    background-color: #6c757d;
+    background-color: ${colors.secondary};
   }
 
   &.button--large {
@@ -101,7 +112,102 @@ var Button = (_a) => {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ButtonBase, __spreadProps(__spreadValues({ className }, props), { children }));
 };
 var Button_default = Button;
+
+// src/components/atoms/Link/Link.tsx
+var import_react_router_dom = require("react-router-dom");
+
+// src/components/atoms/Link/Link.styled.ts
+var import_styled_components2 = __toESM(require("styled-components"));
+var StyledLink = import_styled_components2.default.a`
+  color: #007bff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+// src/components/atoms/Link/Link.tsx
+var import_jsx_runtime2 = require("react/jsx-runtime");
+var Link = (_a) => {
+  var _b = _a, { href, children } = _b, props = __objRest(_b, ["href", "children"]);
+  const isExternal = href.startsWith("http");
+  if (isExternal) {
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(StyledLink, __spreadProps(__spreadValues({ href, target: "_blank", rel: "noopener noreferrer" }, props), { children }));
+  }
+  const _a2 = props, { to } = _a2, restProps = __objRest(_a2, ["to"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react_router_dom.Link, __spreadProps(__spreadValues({ to: href }, restProps), { children }));
+};
+var Link_default = Link;
+
+// src/components/atoms/Typography/Heading.styled.ts
+var import_styled_components3 = __toESM(require("styled-components"));
+var Heading1 = import_styled_components3.default.h1`
+  font-size: 2.5rem;
+  color: ${colors.primary};
+`;
+var Heading2 = import_styled_components3.default.h2`
+  font-size: 2rem;
+  color: ${colors.primary};
+`;
+var Heading3 = import_styled_components3.default.h3`
+  font-size: 1.75rem;
+  color: ${colors.primary};
+`;
+var Heading4 = import_styled_components3.default.h4`
+  font-size: 1.5rem;
+  color: ${colors.primary};
+`;
+var Heading5 = import_styled_components3.default.h5`
+  font-size: 1.25rem;
+  color: ${colors.primary};
+`;
+var Heading6 = import_styled_components3.default.h6`
+  font-size: 1rem;
+  color: ${colors.primary};
+`;
+
+// src/components/atoms/Typography/Heading.tsx
+var import_jsx_runtime3 = require("react/jsx-runtime");
+var Heading = (_a) => {
+  var _b = _a, { level, children } = _b, props = __objRest(_b, ["level", "children"]);
+  switch (level) {
+    case 1:
+      return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Heading1, __spreadProps(__spreadValues({}, props), { children }));
+    case 2:
+      return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Heading2, __spreadProps(__spreadValues({}, props), { children }));
+    case 3:
+      return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Heading3, __spreadProps(__spreadValues({}, props), { children }));
+    case 4:
+      return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Heading4, __spreadProps(__spreadValues({}, props), { children }));
+    case 5:
+      return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Heading5, __spreadProps(__spreadValues({}, props), { children }));
+    case 6:
+      return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Heading6, __spreadProps(__spreadValues({}, props), { children }));
+    default:
+      return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Heading1, __spreadProps(__spreadValues({}, props), { children }));
+  }
+};
+var Heading_default = Heading;
+
+// src/components/atoms/Typography/Paragraph.styled.ts
+var import_styled_components4 = __toESM(require("styled-components"));
+var ParagraphBase = import_styled_components4.default.p`
+  font-size: 1rem;
+  color: ${colors.secondary};
+`;
+
+// src/components/atoms/Typography/Paragraph.tsx
+var import_jsx_runtime4 = require("react/jsx-runtime");
+var Paragraph = (_a) => {
+  var _b = _a, { children } = _b, props = __objRest(_b, ["children"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ParagraphBase, __spreadProps(__spreadValues({}, props), { children }));
+};
+var Paragraph_default = Paragraph;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  Button
+  Button,
+  Heading,
+  Link,
+  Paragraph
 });
