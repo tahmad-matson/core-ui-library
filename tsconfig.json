@@ -15,7 +15,12 @@
     "declaration": true,
     "declarationDir": "./dist/types",
     "outDir": "./dist",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@theme/*": ["src/theme/*"]
+    }
   },
   "include": ["src"]
 }

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { colors } from '@theme/colors';
 
 export const ButtonBase = styled.button`
-  background-color: #007bff;
+  background-color: ${colors.primary};
   border: none;
   border-radius: 4px;
   color: white;
@@ -10,11 +11,11 @@ export const ButtonBase = styled.button`
   cursor: pointer;
 
   &.button--primary {
-    background-color: #007bff;
+    background-color: ${colors.primary};
   }
 
   &.button--secondary {
-    background-color: #6c757d;
+    background-color: ${colors.secondary};
   }
 
   &.button--large {
