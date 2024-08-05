@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+```markdown
+# Core UI Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+@matson-inc/core-ui-library is a reusable component library built with React, TypeScript, and styled-components. This library follows the atomic design methodology, providing a set of modular, composable, and reusable UI components.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To install the package, run the following command:
 
-### `npm start`
+```bash
+npm install @matson-inc/core-ui-library
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Below is an example of how to use the `Button` component from the `core-ui-library`.
 
-### `npm test`
+### Importing the Button Component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+First, import the `Button` component into your project:
 
-### `npm run build`
+```tsx
+import React from 'react';
+import { Button } from '@matson-inc/core-ui-library';
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Using the Button Component
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here’s an example of how to use the `Button` component in your React application:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```tsx
+import React from 'react';
+import { Button } from '@matson-inc/core-ui-library';
 
-### `npm run eject`
+const App: React.FC = () => {
+  return (
+    <div>
+      <Button variant="primary" size="large">Primary Button</Button>
+      <Button variant="secondary" size="small">Secondary Button</Button>
+    </div>
+  );
+};
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+export default App;
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Button Props
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The `Button` component accepts the following props:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `variant`: Defines the style of the button. Possible values are `primary` and `secondary`. Default is `primary`.
+- `size`: Defines the size of the button. Possible values are `small`, `medium`, and `large`. Default is `medium`.
+- Any other props are passed directly to the underlying `<button>` element.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! Please follow these steps to contribute:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes.
+4. Push your branch and create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+## Maintainers
+
+This project is maintained by the Matson Inc team. If you have any questions or issues, please contact us at support@matson-inc.com.
+```
+
+### Summary
+
+This README provides instructions on how to install the package, use the `Button` component, and includes basic information about contributing and licensing. Feel free to customize it further based on the additional components you may have in your library and any other specific details you want to include.
