@@ -1,8 +1,3 @@
-```markdown
-# Core UI Library
-
-@matson-inc/core-ui-library is a reusable component library built with React, TypeScript, and styled-components. This library follows the atomic design methodology, providing a set of modular, composable, and reusable UI components.
-
 ## Installation
 
 To install the package, run the following command:
@@ -77,4 +72,3 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 ## Maintainers
 
 This project is maintained by the Matson Inc team. If you have any questions or issues, please contact us at tahmad@matson.com.
-```
